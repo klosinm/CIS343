@@ -14,7 +14,7 @@ void JParse(char*, int);
 //}width;
 
 /************
-function Main
+function Main, where user puts input for what type of parsing they want
 **************/
 int main(int argc, char *argv[]){
   
