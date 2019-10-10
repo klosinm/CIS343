@@ -57,34 +57,36 @@ void JParse(char* textfile, int LLength){
             overflow = false;       
          } 
 
-        
+        /*
         int k = 0;
+        int wordsize = 0;
         for(k = 0; k < LLength; k++){
               partA[k] = toks[k];
+              printf("Array[%i] is: %s, size %i\n", k, partA, wordsize);
+              wordsize += 1;
+               if (wordsize > LLength){
+                   exit(0);
+               }
               //numofChar = numOfChar + strlen(toks);
 
              // printf("Array is: %c", partA);
         }
-        printf("Array is: %s\n", partA);
-        
-          
-      
-            if((size + strlen(toks)) < (LLength)){
-           
-              size = size  + 1 + strlen(toks);
-             //printf("%s ", toks);
-            // printf("%s ", toks);
-            
-             numOfToks = 1 + numOfToks;
-             }
-             else{
-           //  printf("| max width: %i, size: %i, number of tokens: %i, next token: %s\n", LLength, size, numOfToks, toks); //test
-              //printf("\n%s ", toks);
-              size = strlen(toks);  
-              numOfToks = 1;                                                       
-             // printf("(size of tok %s: %i, size: %i)",toks, (strlen(toks), size)); //test
-             } 
-           toks = strtok(NULL, "\n ");    
+       //printf("Array is: %s, size %i\n", partA, wordsize);
+        */
+
+       
+         if((size + strlen(toks)) <= LLength){
+           size = size  + 1 +  strlen(toks);
+           printf("%s", toks);
+         }
+         else{
+          // printf("| max width: %i, size: %i, next token: %s\n", LLength, size, toks); //test
+           printf("\n%s", toks);
+           size = strlen(toks) +1;    
+                                                                   
+           // printf("(size of tok %s: %i, size: %i)",toks, (strlen(toks), size)); //test
+         }     
+         toks = strtok(NULL, "\n ");  
            
         
                

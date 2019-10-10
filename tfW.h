@@ -38,7 +38,7 @@ void WParse(char* textfile, int LLength){
       while(toks != NULL ){
 
          //if total token size is less then the length provided
-         //if((size + strlen(toks)) <= width.w){
+        
 
          if(strlen(toks)>LLength){
            //printf("bad tok: %s", toks); //test
