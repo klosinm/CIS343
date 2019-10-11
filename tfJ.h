@@ -35,8 +35,15 @@ void JParse(char *textfile, int LLength)
     //printing space between paragraphs
     if (strlen(textfile) == 1)
     {
+      for (int j = 0; j < size; j++)
+      {
+        printf("%c", partA[j]);
+      }
       printf("\n\n");
+      //clears
+      strcpy(partA, "");
       size = 0;
+      wordsize = 0;
     }
 
     char *toks;
@@ -64,7 +71,7 @@ void JParse(char *textfile, int LLength)
       else
       {
         int len = strlen(toks);
-        //printf("toks:%s, size: %d, wordSize: %d\n\n", toks, size, len);
+        // printf("toks:%s, size: %d, wordSize: %d\n\n", toks, size, len);
         if ((size + strlen(toks)) + 1 <= LLength)
         {
           //add token to array
@@ -118,6 +125,11 @@ void JParse(char *textfile, int LLength)
       }
       toks = strtok_r(NULL, "\n ", &rest);
     }
+  }
+
+  for (int j = 0; j < size; j++)
+  {
+    printf("%c", partA[j]);
   }
   if (!overflow)
   {
