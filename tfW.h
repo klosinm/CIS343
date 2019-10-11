@@ -11,13 +11,11 @@ void WParse(char* textfile, int LLength){
 
 //confirming we have size of line length from terminal
   // struct PartC width = LLength;
-  //printf("Line length: %d\n",width.w);
-  printf("Line length: %d\n",LLength);
+  //printf("Line length: %d\n",LLength);
 
   //array to hold the string with a certain line length
   //char array[width.w];
   //char array[LLength];
-  printf("----+----1----+----2----+----3----+----4----+----5\n");
   //get size of the string
   int size  =  0; 
   int i = 0;
@@ -38,7 +36,6 @@ void WParse(char* textfile, int LLength){
       while(toks != NULL ){
 
          //if total token size is less then the length provided
-        
 
          if(strlen(toks)>LLength){
            //printf("bad tok: %s", toks); //test
@@ -46,6 +43,7 @@ void WParse(char* textfile, int LLength){
             overflow = false;       
          } 
         if((size + strlen(toks)) <= LLength){
+           
            size = size  + 1 +  strlen(toks);
            printf("%s ", toks);
          }
@@ -56,14 +54,12 @@ void WParse(char* textfile, int LLength){
                                                                    
            // printf("(size of tok %s: %i, size: %i)",toks, (strlen(toks), size)); //test
          }     
-         toks = strtok(NULL, "\n "); 
-             
+         toks = strtok(NULL, "\n ");       
       } 
   }
   if(!overflow){
    printf("\n\nWarning: %i overfull line(s)", i);
   }
-            
-printf("\n----+----1----+----2----+----3----+----4----+----5\n");
+  printf("\n");
 exit(0);
 }

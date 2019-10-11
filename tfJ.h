@@ -7,96 +7,124 @@ function to parse the text file based on the number following -j #
 
 -Distribute the words equally given the space (#) provided 
 **************/
-void JParse(char* textfile, int LLength){
 
-//printf("Welcome to part J!\n");
-
-
-//confirming we have size of line length from terminal
-  printf("Line length: %d\n",LLength);
-
-  
-
+void JParse(char *textfile, int LLength)
+{
   printf("----+----1----+----2----+----3----+----4----+--\n");
   //get size of the string
-  int size  =  0; 
+  int size = 0;
   int i = 0;
 
-    //number of words
-   int numOfToks = 1;  
-   //number of characters
-   int numOfChar = 0;
+  //number of words
+  int numOfToks = 1;
+  //number of characters
+  int numOfChar = 0;
 
-   int Dif = LLength - size;
-   float seperator = Dif/numOfToks;
   bool overflow = true;
 
- //array to hold the string with a certain line length
+  //array to hold the string with a certain line length
   char partA[LLength];
 
-
+  //number of words in line
+  int wordsize = 0;
 
   //print everything word by word
-  while(fgets(textfile, 100, stdin)) {
-    
+  while (fgets(textfile, 100, stdin))
+  {
+
     //printing space between paragraphs
-    if (strlen(textfile) == 1){
+    if (strlen(textfile) == 1)
+    {
       printf("\n\n");
       size = 0;
     }
 
-    char * toks;
-    toks = strtok(textfile, "\n ");
-    
+    char *toks;
+    char *rest;
+    toks = strtok_r(textfile, "\n ", &rest);
+
     //splitting the line by space
-    while(toks != NULL ){
-        
-         //if total token size is less then the length provide
-         if(strlen(toks)>LLength){
-            i = i + 1;    
-            overflow = false;       
-         } 
+    while (toks != NULL)
+    {
+      //printf("token: %s\n", toks);
 
-        /*
-        int k = 0;
-        int wordsize = 0;
-        for(k = 0; k < LLength; k++){
-              partA[k] = toks[k];
-              printf("Array[%i] is: %s, size %i\n", k, partA, wordsize);
-              wordsize += 1;
-               if (wordsize > LLength){
-                   exit(0);
-               }
-              //numofChar = numOfChar + strlen(toks);
+      //if total token size is less then the length provide
+      if (strlen(toks) > LLength)
+      {
+        i = i + 1;
+        overflow = false;
+      }
 
-             // printf("Array is: %c", partA);
+      if (wordsize == 0)
+      {
+        strcpy(partA, toks);
+        wordsize += 1;
+        size += strlen(toks);
+      }
+      else
+      {
+        int len = strlen(toks);
+        //printf("toks:%s, size: %d, wordSize: %d\n\n", toks, size, len);
+        if ((size + strlen(toks)) + 1 <= LLength)
+        {
+          //add token to array
+          strcat(partA, " ");
+          strcat(partA, toks);
+          wordsize += 1;
+          size += 1 + strlen(toks);
         }
-       //printf("Array is: %s, size %i\n", partA, wordsize);
-        */
+        else
+        {
+          //printf("toks:%s, size: %d, wordSize: %d\n\n", toks, size, len);
+          int spaceToUse = LLength - size;
+          int numofGaps = wordsize - 1;
 
-       
-         if((size + strlen(toks)) <= LLength){
-           size = size  + 1 +  strlen(toks);
-           printf("%s", toks);
-         }
-         else{
-          // printf("| max width: %i, size: %i, next token: %s\n", LLength, size, toks); //test
-           printf("\n%s", toks);
-           size = strlen(toks) +1;    
-                                                                   
-           // printf("(size of tok %s: %i, size: %i)",toks, (strlen(toks), size)); //test
-         }     
-         toks = strtok(NULL, "\n ");  
-           
-        
-               
-      } 
+          int idealGap = spaceToUse / numofGaps;
+
+          int numerator = 0;
+          int denominator = numofGaps;
+
+          char *toksA;
+          toksA = strtok(partA, "\n ");
+
+          while (toksA != NULL)
+          {
+            //print one word
+            printf("%s ", toksA);
+
+            for (int i = 0; i < idealGap; i++)
+            {
+              printf(" ");
+            }
+            //get extra of how many will need to be printed
+            numerator += spaceToUse % numofGaps;
+
+            if (numerator >= denominator)
+            {
+              numerator -= denominator;
+              printf(" ");
+            }
+
+            toksA = strtok(NULL, "\n ");
+            //printf("toksA:%s\n\n", toksA);
+          }
+          printf("\n");
+          strcpy(partA, toks);
+          wordsize = 1;
+          size = strlen(toks);
+        }
+        //toks = strtok(NULL, "\n ");
+        //toks = strtok_r(NULL, "\n ", &rest);
+      }
+      toks = strtok_r(NULL, "\n ", &rest);
+    }
   }
-  if(!overflow){
-  printf("\n\nWarning: %i overfull line(s)", i);
+  if (!overflow)
+  {
+    printf("\n\nWarning: %i overfull line(s)", i);
   }
 
+  printf("\n----+----1----+----2----+----3----+----4----+--\n");
 
-printf("\n----+----1----+----2----+----3----+----4----+--\n");
-exit(0);
+  exit(0);
 }
