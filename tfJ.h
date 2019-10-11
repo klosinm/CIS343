@@ -4,21 +4,17 @@
 #include <stdbool.h>
 /************
 function to parse the text file based on the number following -j #
-
 -Distribute the words equally given the space (#) provided 
 **************/
 
+char *strtok_r(char *, const char *, char **);
+
 void JParse(char *textfile, int LLength)
 {
-  printf("----+----1----+----2----+----3----+----4----+--\n");
+
   //get size of the string
   int size = 0;
   int i = 0;
-
-  //number of words
-  int numOfToks = 1;
-  //number of characters
-  int numOfChar = 0;
 
   bool overflow = true;
 
@@ -53,7 +49,6 @@ void JParse(char *textfile, int LLength)
     //splitting the line by space
     while (toks != NULL)
     {
-      //printf("token: %s\n", toks);
 
       //if total token size is less then the length provide
       if (strlen(toks) > LLength)
@@ -70,8 +65,7 @@ void JParse(char *textfile, int LLength)
       }
       else
       {
-        int len = strlen(toks);
-        // printf("toks:%s, size: %d, wordSize: %d\n\n", toks, size, len);
+
         if ((size + strlen(toks)) + 1 <= LLength)
         {
           //add token to array
@@ -135,8 +129,6 @@ void JParse(char *textfile, int LLength)
   {
     printf("\n\nWarning: %i overfull line(s)", i);
   }
-
-  printf("\n----+----1----+----2----+----3----+----4----+--\n");
 
   exit(0);
 }
