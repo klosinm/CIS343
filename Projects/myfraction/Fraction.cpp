@@ -5,22 +5,24 @@
 #include <sstream>
 
 using namespace std;
+/*_________________
+Monica Klosin
+Nov 13 2019
+Fraction Maker
+__________________*/
 
-/* Fwriend functions */
+/* Friend functions */
 Fraction operator+(int val, const Fraction &f)
-{   
-    return f + val;
+{
+    return (f).operator+(val);
 }
 Fraction operator-(int val, const Fraction &f)
 {
-    return f - val;
-   
+    return (-f).operator-(-val);
 }
 Fraction operator*(int val, const Fraction &f)
 {
     return f * val;
-   //  *f;
-    
 }
 //----------------------------------------------------------------------------------------
 //base clarifcation
@@ -41,30 +43,26 @@ Fraction::Fraction(int v)
     {
         isPos = false;
     }
-    else{
+    else
+    {
         isPos = true;
     }
 }
 //copy
 Fraction::Fraction(const Fraction &other)
 {
-    this->x = other.numerator();
-    this->y = other.denominator();
-    this->w = other.whole();
-    if(this->x < 0 || this->w < 0){
-        this->isPos = false;
-    }
-    else{
-        this->isPos = true;
-    }
+    this->x = other.x;
+    this->y = other.y;
+    this->w = other.w;
+    this->isPos = other.isPos;
 }
 //move
 Fraction::Fraction(Fraction &&other)
 {
-    this->x = other.numerator();
-    this->y = other.denominator();
-    this->w = other.whole();
-    this->isPos = other.isPositive();
+    this->x = other.x;
+    this->y = other.y;
+    this->w = other.w;
+    this->isPos = other.isPos;
 }
 //parscing from string output
 Fraction::Fraction(std::string s)
@@ -77,10 +75,6 @@ Fraction::Fraction(std::string s)
     std::string dem = "1";
     std::string whole = "0";
 
-    //int num = 0;
-    //int dem = 1;
-    //int whole = 0;
-
     // whole number
     if (isSpace != std::string::npos)
     {
@@ -91,7 +85,6 @@ Fraction::Fraction(std::string s)
     {
         whole = "0";
     }
-
     //fraction
     //see if slash
     if (isSlash != std::string::npos)
@@ -107,7 +100,6 @@ Fraction::Fraction(std::string s)
     }
 
     this->w = stoi(whole);
-    
     this->x = stoi(num);
     this->y = stoi(dem);
 
@@ -115,15 +107,14 @@ Fraction::Fraction(std::string s)
     {
         throw std::invalid_argument("Can't divide by 0!");
     }
-    if(this->w <0 || this->x < 0){
+    if (this->w < 0 || this->x < 0)
+    {
         this->isPos = false;
     }
-    else{
+    else
+    {
         this->isPos = true;
     }
-
-    //std::istringstream Input{"[" + s + "]"};
-    //readFrom(Input);
 }
 //----------------------------------------------------------------------------------------
 int Fraction::whole() const
@@ -132,7 +123,7 @@ int Fraction::whole() const
 }
 int Fraction::numerator() const
 {
-    return abs(x); //% y);
+    return abs(x);
 }
 int Fraction::denominator() const
 {
@@ -140,27 +131,25 @@ int Fraction::denominator() const
 }
 bool Fraction::isPositive() const
 {
-    //return !(this->x < 0 || this->y < 0 || this->w < 0);
     return isPos;
 }
 //----------------------------------------------------------------------------------------
 // Copy assignment
 Fraction &Fraction::operator=(const Fraction &other)
 {
-    this->x = other.numerator();
-    this->y = other.denominator();
-    this->w = other.whole();
-    this->isPos = other.isPositive();
+    this->x = other.x;
+    this->y = other.y;
+    this->w = other.w;
+    this->isPos = other.isPos;
     return *this;
 }
 // Move assignment
 Fraction &Fraction::operator=(Fraction &&other)
 {
-    this->x = other.numerator();
-    this->y = other.denominator();
-    this->w = other.whole();
-    this->isPos = other.isPositive();
-
+    this->x = other.x;
+    this->y = other.y;
+    this->w = other.w;
+    this->isPos = other.isPos;
     return *this;
 }
 //----------------------------------------------------------------------------------------
@@ -186,8 +175,26 @@ int Fraction::lcm(int a, int b) const
 Fraction Fraction::operator+(int num) const
 {
     Fraction fract = *this;
-    fract.w = fract.w + num;
 
+    //make fraction a improper
+    int num1 = fract.x + (fract.w * fract.y);
+    int valNum = num * fract.y;
+
+    int newNum = num1 + valNum;
+
+    if (newNum < 0)
+    {
+        fract.isPos = false;
+    }
+    else
+    {
+        fract.isPos = true;
+    }
+
+    fract.w = 0;
+    fract.x = newNum;
+    fract.makeProper();
+    fract.reduce();
     return fract;
 }
 // Add Fraction + Fraction
@@ -195,70 +202,104 @@ Fraction Fraction::operator+(const Fraction &other) const
 {
     Fraction fract = *this;  //a
     Fraction fract2 = other; //b
-    int temp1 = 0;
-    int temp2 = 0;
-    int numerator1 = 0;
-    int numerator2 = 0;
+    Fraction f;
+
+    //making fract improper
+    int num1 = 0;
+    if (fract.w < 0)
+    {
+        num1 = ((fract.w * fract.y) - fract.x);
+    }
+    else if (fract.w >= 0)
+    {
+        num1 = ((fract.w * fract.y) + fract.x);
+    }
+    int dem1 = 0;
+    dem1 = fract.y;
+
+    //making fract2 improper
+    int num2 = 0;
+    if (fract2.w < 0)
+    {
+        num2 = ((fract2.w * fract2.y) - fract2.x);
+    }
+    else if (fract2.w >= 0)
+    {
+        num2 = ((fract2.w * fract2.y) + fract2.x);
+    }
+    int dem2 = 0;
+    dem2 = fract2.y;
 
     //finding consistent denominator
-    int lcd = lcm(fract.denominator(), fract2.denominator());
+    int lcd = lcm(dem1, dem2);
 
-    //change first fraction if needed
-    if (fract.denominator() < lcd)
-    {
-        temp1 = lcd / fract.denominator();
-        numerator1 = temp1 * fract.numerator();
-    }
-
-    //change second fraction if needed
-    if (fract2.denominator() < lcd)
-    {
-        temp2 = lcd / fract2.denominator();
-        numerator2 = temp2 * fract2.numerator();
-    }
+    //change fractions if needed
+    num1 = (lcd / dem1) * num1;
+    dem1 = lcd;
+    num2 = (lcd / dem2) * num2;
+    dem2 = lcd;
 
     //New numerator
-    int sumNum = numerator1 + numerator2;
-    //Return Value
-    if(fract.w < 0){
-        fract.w = (fract2.w - fract.w);
+    int sumNum = num2 + num1;
+
+    if (sumNum < 0 || f.w < 0)
+    {
+        f.isPos = false;
     }
-    else if(fract2.w < 0){
-        fract.w = (fract.w - fract2.w);
-    }
-    else{
-    fract.w = fract.w + fract2.w;
+    else
+    {
+        f.isPos = true;
     }
 
-    Fraction f;
     f.x = sumNum;
     f.y = lcd;
-    f.w = fract.w;
-
-    f.makeProper();
+    f.w = 0;
     f.reduce();
+    f.makeProper();
     return f;
-    
 }
 //make negative/postive
 Fraction Fraction::operator-() const
 {
     Fraction fract = *this;
-    return (-1) * fract;
+
+    //value WAS negative, make pos
+    if (fract.w < 0 || fract.x < 0)
+    {
+        fract.isPos = true;
+        fract.w = fract.w * -1;
+        fract.x = fract.x * -1;
+    }
+    //value WAS positive, make negative
+    else if (fract.w > 0 || fract.x > 0)
+    {
+        fract.isPos = false;
+        fract.x = fract.x * -1;
+        fract.w = fract.w * -1;
+    }
+    return (fract);
 }
 // binary minus: Frac - int
 Fraction Fraction::operator-(int val) const
 {
     Fraction fract = *this;
     //make fraction a improper
-    // x = 6 + (2 * 13) == 32
+
     int num1 = fract.x + (fract.w * fract.y);
 
-    //15 * 13 = 195
     int valNum = val * fract.y;
 
-    int newNum = valNum - num1;
-  //  -valNum;
+    int newNum = num1 - valNum;
+    //int newNum = valNum - num1;
+
+    if (newNum < 0)
+    {
+        fract.isPos = false;
+    }
+    else
+    {
+        fract.isPos = true;
+    }
     fract.w = 0;
     fract.x = newNum;
     fract.makeProper();
@@ -270,51 +311,33 @@ Fraction Fraction::operator-(const Fraction &other) const
 {
     Fraction fract = *this;
     Fraction fract2 = other;
-    int temp = 0;
-    int numerator1 = 0;
-    int numerator2 = 0;
 
-    //finding consistent denominator
-    int lcd = lcm(fract.denominator(), fract2.denominator());
+    //make improper
+    int imp1 = abs(fract.y * fract.w) + abs(fract.x);
+    int imp2 = abs(fract2.y * fract2.w) + abs(fract2.x);
+   
+    //new  numerator
+    int num1 = imp1 * fract2.y;
+    int num2 = imp2 * fract.y;
+    int sumNum = (num1 - num2);
 
-    //change first fraction if needed
-    if (fract.denominator() < lcd)
-    {
-        temp = lcd / fract.denominator();
-        numerator1 = temp * fract.numerator();
-    }
+    //new demoniator
+    int dem = fract.y * fract2.y;
 
-    //change second fraction if needed
-    if (fract2.denominator() < lcd)
-    {
-        temp = lcd / fract2.denominator();
-        numerator2 = temp * fract2.numerator();
-    }
-
-    //New numerator
-    int sumNum = (numerator1 - numerator2);
-    if (fract.w < 0)
-    {
-        fract.w = (fract2.w - fract.w);
-    
-    }
-    else
-    {
-        fract.w = fract.w - fract2.w;
-    }
-
+    //New whole
+    fract.w = 0;
     fract.x = sumNum;
-    fract.y = lcd;
-    fract.reduce();
+    fract.y = dem;
 
-    if (fract.w < 0 || fract.x < 0)
+    if (fract.w < 0 || sumNum < 0 || fract2.w < 0)
     {
         fract.isPos = false;
     }
-    else{
+    else
+    {
         fract.isPos = true;
     }
-
+    fract.reduce();
     fract.makeProper();
     return fract;
 }
@@ -323,9 +346,22 @@ Fraction Fraction::operator*(int val) const
 {
     Fraction fract = *this;
 
-        fract.w = fract.w * val;
-        fract.x = fract.x * val;
- 
+    fract.w = fract.w * val;
+    fract.x = fract.x * val;
+
+    if (val < 0 || fract.w < 0 || fract.x < 0)
+    {
+        fract.isPos = false;
+    }
+    else if ((val < 0 && fract.w < 0) || (val < 0 && fract.x < 0) || (val >= 0 && fract.w >= 0 && fract.x >= 0))
+    {
+        fract.isPos = true;
+    }
+    else
+    {
+        fract.isPos = true;
+    }
+
     fract.makeProper();
     fract.reduce();
     return fract;
@@ -334,21 +370,33 @@ Fraction Fraction::operator*(int val) const
 Fraction Fraction::operator*(const Fraction &other) const
 {
     Fraction fract = *this;
-
     Fraction fract2 = other;
-    //make fraction a improper
-    int num1 = fract.x + (fract.w * fract.y);
-    int num2 = fract2.x + (fract2.w * fract2.y);
-
-    int dem = fract2.y* fract.y; //finding  denominator
-    int num = num1 * num2;       //finding  numerator
-    //Return Value
     Fraction f{};
-   
+
+    if (fract.w < 0 && fract2.w < 0)
+    {
+        f.isPos = true;
+    }
+    else if (fract.x < 0 || fract.w < 0 || fract2.w < 0 || fract2.x < 0)
+    {
+        f.isPos = false;
+    }
+    else
+    {
+        f.isPos = true;
+    }
+
+    //make fraction a improper
+    int num1 = abs(fract.x) + abs(fract.w * fract.y);
+    int num2 = abs(fract2.x) + abs(fract2.w * fract2.y);
+
+    int dem = fract2.y * fract.y; //finding  denominator
+    int num = num1 * num2;        //finding  numerator
+
+    //Return Value
     f.x = num;
     f.y = dem;
-   
-    
+
     f.makeProper();
     f.reduce();
     return f;
@@ -357,41 +405,58 @@ Fraction Fraction::operator*(const Fraction &other) const
 // Component access Frac[i]
 optional<int> Fraction::operator[](int pos) const
 {
-    //case 0 check if whole num equals 0, return non, otherwise rturn whole
-    switch (pos)
-    {
-    //whole
-    case 0:
+    std::optional<int> NA;
 
-    //numer
-    case 1:;
-    //demon
-    case 2:;
-    
-
+    if (pos == 0){
+        if(w != 0){
+            return w;
+        }
+        else{
+            return NA;
+        }
     }
-
-    return 1;
-    //this;
+    else if (pos == 1){
+        if (x != 0)
+        {
+            return x;
+        }
+        else
+        {
+            return NA;
+        }
+    }
+    else if (pos == 2)
+    {
+        if (y != 1)
+        {
+            return y;
+        }
+        else
+        {
+            return NA;
+        }
+    }
+    else{
+        return NA;
+    } 
 }
 // Compare Frac < Frac
 bool Fraction::operator<(const Fraction &other) const
 {
     Fraction fract = *this;
     Fraction fract2 = other;
-    //make fraction a improper
+    //make fraction improper
     int num1 = fract.x + (fract.w * fract.y) * fract2.y;
     int num2 = fract2.x + (fract2.w * fract2.y) * fract.y;
 
-    fract.x = num1;
-    fract2.x = num2;
-    fract.w = 0;
-    fract2.w = 0;
+    //finding consistent denominator
+    int lcd = lcm(fract.denominator(), fract2.denominator());
 
-    fract.reduce();
-    fract2.reduce();
+    //make numerators match new denominator
+    num1 = (lcd / fract.y) * num1;
+    num2 = (lcd / fract2.y) * num2;
 
-    if (fract.w < fract2.w)
+    if (num1 < num2)
     {
         return true;
     }
@@ -417,12 +482,14 @@ bool Fraction::operator==(const Fraction &other) const
     fract.reduce();
     fract2.reduce();
 
-   if(fract.x == fract2.x && fract.y == fract2.y){
-       return true;
-   }
-   else{
-       return false;
-   }
+    if (fract.x == fract2.x && fract.y == fract2.y)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 //----------------------------------------------------------------------------------------
 //Proper
@@ -438,8 +505,9 @@ void Fraction::makeProper()
         return;
     }
     //numerator is greater than denominator
-    else if (this->x > this->y)
+    else if (abs(this->x) > this->y)
     {
+
         num = this->x % this->y;
         whole = this->w + (this->x - num) / this->y;
         this->x = num;
@@ -449,12 +517,14 @@ void Fraction::makeProper()
             this->y = 1;
         }
     }
-    else if( this-> x == this->y){
+    else if (this->x == this->y)
+    {
         this->x = 0;
         this->y = 1;
         this->w = 1;
     }
-    else{
+    else
+    {
         return;
     }
 }
@@ -481,7 +551,7 @@ bool Fraction::isProper() const
 // Reduce
 void Fraction::reduce()
 {
-   
+
     int top = 0;
     int bottom = 0;
     int divide = gcf(this->x, this->y);
@@ -513,44 +583,73 @@ bool Fraction::isReduced() const
 }
 //----------------------------------------------------------------------------------------
 ostream &Fraction::writeTo(ostream &os) const
-{
-
-    return os;
+{   
+   std::string s = "";
+//w x/y
+ if(this-> w != 0 && this->x != 0 && this->y != 1){
+    s = s + to_string(this->w) + " " + to_string(this->x) + "/" + to_string(this->y);
+}
+//x/y
+else if(this->w == 0 && this->x != 0 && this->y != 1){
+    s = s + to_string(this->x) + "/" + to_string(this->y);
+}
+//w
+else if (this-> w != 0 && this->x == 0 && this->y == 1){
+    s = s + to_string(this->w);
+}
+//NA
+else{
+    s = to_string(0);
 }
 
-istream &Fraction::readFrom(istream &sr) /*throw(std::invalid_argument) */
+os << "[" << s << "]"; 
+ 
+ return os;  
+}
+
+istream &Fraction::readFrom(istream &sr) 
 {
     char ch;
-    string a = "";
+    string s = "";
     ch = sr.get(); //
 
-    //goes untill you find the start
-    if ('[' != std::string::npos || ']' != std::string::npos)
-    {
-        throw std::invalid_argument("Doesn't have a []!");
-    }
-    else
-    {
-
-        while (ch != '[')
+ while(ch != '['){
+     //if you get a close bracket before open one
+     if (ch == ']')
         {
-            ch = sr.get();
+            throw(std::invalid_argument)("No open [ bracket!");
         }
+        ch = sr.get(); 
+ }
+    ch = sr.get();
+    
 
+    while (ch != ']'){
+        //get to end of stream and find no ]
+        if(ch == ' ' || isdigit(ch) || ch == '/' || ch == '-'){
+            s = s + ch;
+            //cout << "String: " << s << endl;
+            if (sr.fail())
+            {
+                throw(std::invalid_argument)("No closing ] bracket!");
+            }
+        }
+        else{
+            throw(std::invalid_argument)("Not a valid character!");           
+        }
         ch = sr.get();
-        //get middle input of fraction goodness
-        while (ch != ']')
-        {
-            a = a + ch;
-            ch = sr.get();
-        }
     }
-    //*this = Fraction{a};
-    Fraction f = Fraction{a};
+
+    if (s == ""){
+        throw(std::invalid_argument)("Empty String!");
+    }
+       
+   
+    Fraction f = Fraction{s};
     this->x = f.x;
     this->y = f.y;
     this->w = f.w;
-
+    this->isPos = f.isPos;
     return sr;
 }
 

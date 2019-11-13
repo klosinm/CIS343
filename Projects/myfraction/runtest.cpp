@@ -205,7 +205,7 @@ TEST_CASE("Input")
 
         source >> num;
 
-        CHECK(num.whole() == 0); //0
+        CHECK(num.whole() == 0);
         CHECK(num.numerator() == 0);
         CHECK(num.denominator() == 1);
         CHECK(num.isPositive());
@@ -552,7 +552,6 @@ TEST_CASE("Operator Assignment")
         Fraction one{"-3 7/19"};
         Fraction two;
 
-       
         two = std::move(one);
         CHECK(two.whole() == 3);
         CHECK_FALSE(two.isPositive());
@@ -604,8 +603,8 @@ TEST_CASE("Operator +")
         Fraction sum;
 
         sum = -14 + one; // -11 7/13
-        CHECK(sum.whole() == 12);
-        CHECK(sum.numerator() == 6);
+        CHECK(sum.whole() == 11);
+        CHECK(sum.numerator() == 7);
         CHECK(sum.denominator() == 13);
         CHECK_FALSE(sum.isPositive());
     }
@@ -702,10 +701,7 @@ TEST_CASE("Operator -")
         Fraction a{"33 5/6"};
         Fraction b{"9 3/4"};
         Fraction sum;
-        sum = b - a; 
-        // -33 10/12 + 9 9/12 =
-        // -33 19/12 = 
-        //-24 1/12
+        sum = b - a; // -33 10/12 + 9 9/12 = -33 19/12 = -24 1/12
 
         CHECK_FALSE(sum.isPositive());
         CHECK(sum.whole() == 24);
@@ -1095,17 +1091,8 @@ TEST_CASE("Operator<")
 
     SECTION("Both positive")
     {
-        //75/7
-        //1500/140
         Fraction a{"10 5/7"};
-        //77/20
-        //539/140
         Fraction b{"3 17/20"};
-
-        CHECK(a.numerator() == 1500);
-        CHECK(a.denominator() == 140);
-        CHECK(b.numerator() == 539);
-        CHECK(b.denominator() == 140);
         CHECK_FALSE(a < b);
         CHECK(b < a);
     }
@@ -1132,9 +1119,23 @@ TEST_CASE("Fraction arithmetic")
     Fraction one{"3 12/25"};
     Fraction two{"11 4/5"};
     Fraction result;
+    Fraction result2;
+    Fraction result3;
 
     result = one + two - two * one;
+   /* result3 = one + two;
+    result2 = two * one;
+    result = result - result2;*/
+
     CHECK_FALSE(result.isPositive());
+  /*  CHECK(result3.whole() == 15);
+    CHECK(result3.numerator() == 7);
+    CHECK(result3.denominator() == 25);
+
+    CHECK(result2.whole() == 41);
+    CHECK(result2.numerator() == 8);
+    CHECK(result2.denominator() == 125);*/
+
     CHECK(result.whole() == 25);
     CHECK(result.numerator() == 98);
     CHECK(result.denominator() == 125);
