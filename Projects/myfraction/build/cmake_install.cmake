@@ -1,4 +1,4 @@
-# Install script for directory: /Users/monicaklosin/Desktop/CIS343/myfraction
+# Install script for directory: /Users/monicaklosin/Desktop/Cis343/Projects/myfraction
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/monicaklosin/Desktop/CIS343/myfraction/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/monicaklosin/Desktop/Cis343/Projects/myfraction/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

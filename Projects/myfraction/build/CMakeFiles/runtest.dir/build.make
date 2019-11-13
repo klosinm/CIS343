@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.15.5/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/monicaklosin/Desktop/CIS343/myfraction
+CMAKE_SOURCE_DIR = /Users/monicaklosin/Desktop/Cis343/Projects/myfraction
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/monicaklosin/Desktop/CIS343/myfraction/build
+CMAKE_BINARY_DIR = /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/runtest.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/runtest.dir/flags.make
 
 CMakeFiles/runtest.dir/Fraction.cpp.o: CMakeFiles/runtest.dir/flags.make
 CMakeFiles/runtest.dir/Fraction.cpp.o: ../Fraction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/monicaklosin/Desktop/CIS343/myfraction/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runtest.dir/Fraction.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runtest.dir/Fraction.cpp.o -c /Users/monicaklosin/Desktop/CIS343/myfraction/Fraction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/monicaklosin/Desktop/Cis343/Projects/myfraction/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runtest.dir/Fraction.cpp.o"
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runtest.dir/Fraction.cpp.o -c /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/Fraction.cpp
 
 CMakeFiles/runtest.dir/Fraction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runtest.dir/Fraction.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/monicaklosin/Desktop/CIS343/myfraction/Fraction.cpp > CMakeFiles/runtest.dir/Fraction.cpp.i
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/Fraction.cpp > CMakeFiles/runtest.dir/Fraction.cpp.i
 
 CMakeFiles/runtest.dir/Fraction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runtest.dir/Fraction.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/monicaklosin/Desktop/CIS343/myfraction/Fraction.cpp -o CMakeFiles/runtest.dir/Fraction.cpp.s
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/Fraction.cpp -o CMakeFiles/runtest.dir/Fraction.cpp.s
 
 CMakeFiles/runtest.dir/runtest.cpp.o: CMakeFiles/runtest.dir/flags.make
 CMakeFiles/runtest.dir/runtest.cpp.o: ../runtest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/monicaklosin/Desktop/CIS343/myfraction/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/runtest.dir/runtest.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runtest.dir/runtest.cpp.o -c /Users/monicaklosin/Desktop/CIS343/myfraction/runtest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/monicaklosin/Desktop/Cis343/Projects/myfraction/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/runtest.dir/runtest.cpp.o"
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runtest.dir/runtest.cpp.o -c /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/runtest.cpp
 
 CMakeFiles/runtest.dir/runtest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runtest.dir/runtest.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/monicaklosin/Desktop/CIS343/myfraction/runtest.cpp > CMakeFiles/runtest.dir/runtest.cpp.i
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/runtest.cpp > CMakeFiles/runtest.dir/runtest.cpp.i
 
 CMakeFiles/runtest.dir/runtest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runtest.dir/runtest.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/monicaklosin/Desktop/CIS343/myfraction/runtest.cpp -o CMakeFiles/runtest.dir/runtest.cpp.s
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/runtest.cpp -o CMakeFiles/runtest.dir/runtest.cpp.s
 
 # Object files for target runtest
 runtest_OBJECTS = \
@@ -95,7 +95,7 @@ runtest: CMakeFiles/runtest.dir/Fraction.cpp.o
 runtest: CMakeFiles/runtest.dir/runtest.cpp.o
 runtest: CMakeFiles/runtest.dir/build.make
 runtest: CMakeFiles/runtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/monicaklosin/Desktop/CIS343/myfraction/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable runtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/monicaklosin/Desktop/Cis343/Projects/myfraction/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable runtest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runtest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/runtest.dir/clean:
 .PHONY : CMakeFiles/runtest.dir/clean
 
 CMakeFiles/runtest.dir/depend:
-	cd /Users/monicaklosin/Desktop/CIS343/myfraction/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/monicaklosin/Desktop/CIS343/myfraction /Users/monicaklosin/Desktop/CIS343/myfraction /Users/monicaklosin/Desktop/CIS343/myfraction/build /Users/monicaklosin/Desktop/CIS343/myfraction/build /Users/monicaklosin/Desktop/CIS343/myfraction/build/CMakeFiles/runtest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/monicaklosin/Desktop/Cis343/Projects/myfraction /Users/monicaklosin/Desktop/Cis343/Projects/myfraction /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/build /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/build /Users/monicaklosin/Desktop/Cis343/Projects/myfraction/build/CMakeFiles/runtest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/runtest.dir/depend
 

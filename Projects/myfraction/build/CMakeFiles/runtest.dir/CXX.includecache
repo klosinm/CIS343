@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/monicaklosin/Desktop/CIS343/myfraction/Fraction.cpp
+/Users/monicaklosin/Desktop/Cis343/Projects/myfraction/Fraction.cpp
 Fraction.h
-/Users/monicaklosin/Desktop/CIS343/myfraction/Fraction.h
+/Users/monicaklosin/Desktop/Cis343/Projects/myfraction/Fraction.h
 algorithm
 -
 iomanip
@@ -18,7 +18,7 @@ regex
 sstream
 -
 
-/Users/monicaklosin/Desktop/CIS343/myfraction/Fraction.h
+/Users/monicaklosin/Desktop/Cis343/Projects/myfraction/Fraction.h
 iostream
 -
 optional

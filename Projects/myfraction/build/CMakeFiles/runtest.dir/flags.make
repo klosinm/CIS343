@@ -6,5 +6,5 @@ CXX_FLAGS = -g -Wall -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/monicaklosin/Desktop/CIS343/myfraction/. 
+CXX_INCLUDES = -I/Users/monicaklosin/Desktop/Cis343/Projects/myfraction/. 
 
