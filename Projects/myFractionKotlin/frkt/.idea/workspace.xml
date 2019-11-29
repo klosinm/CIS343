@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4640d235-43cd-47e3-83a5-249adde10d77" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Project1/.Rhistory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1/Parscing-C" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1/lorem.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1/tf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1/tf.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1/tfJ" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1/tfJ.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1/tfW.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1_PDF/Image 10-11-19 at 11.39 AM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1_PDF/Klosinm_CIS343Project1Code.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1_PDF/Screen Shot 2019-10-11 at 10.03.28 AM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Project1_PDF/cis343proj1 part c with one method.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/.Rhistory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/Fraction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/Fraction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/3.15.5/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/3.15.5/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/3.15.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/3.15.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/3.15.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/3.15.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/3.15.5/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/3.15.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/3.15.5/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/Fraction.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/CMakeFiles/runtest.dir/runtest.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/Fraction-Maker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/build/runtest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/catch.hh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../myfraction/runtest.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/.Rhistory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/Fraction-Maker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/Fraction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/Fraction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/3.15.5/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/3.15.5/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/3.15.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/3.15.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/3.15.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/3.15.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/3.15.5/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/3.15.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/3.15.5/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/Fraction.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/CMakeFiles/runtest.dir/runtest.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/build/runtest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/catch.hh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../myfraction/runtest.cpp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UH18sPzp3UHHiqR896X11Xelov" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="show.unlinked.gradle.project.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="FractTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;gvfraction.FractTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.FractTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4640d235-43cd-47e3-83a5-249adde10d77" name="Default Changelist" comment="" />
+      <created>1574998551159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574998551159</updated>
+      <workItem from="1574998555676" duration="120000" />
+      <workItem from="1574998677672" duration="958000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1372" height="230" key="GridCell.Tab.0.bottom" timestamp="1574999836443">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1372" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1574999836443" />
+    <state width="1372" height="230" key="GridCell.Tab.0.center" timestamp="1574999836441">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1372" height="230" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1574999836441" />
+    <state width="1372" height="230" key="GridCell.Tab.0.left" timestamp="1574999836441">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1372" height="230" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1574999836441" />
+    <state width="1372" height="230" key="GridCell.Tab.0.right" timestamp="1574999836442">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1372" height="230" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1574999836442" />
+    <state x="410" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1574998563796">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="410" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1574998563796" />
+  </component>
+</project>
