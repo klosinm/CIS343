@@ -13,7 +13,7 @@ class FractTest {
     init {
         // TODO register the class that implements
         // the FractionOperator interface
-        //factory.registerClass(YourFraction::class)
+        factory.registerClass(KlosinmFraction::class)
     }
 
     @Test
@@ -163,7 +163,6 @@ class FractTest {
     fun makeProperIntoWholeNumber() {
         val a = factory.create("400/25");
         a.makeProper()
-
         assertFalse(a.isProper())
         assertEquals(16, a.whole())
         assertEquals(0, a.numerator())

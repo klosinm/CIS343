@@ -2,13 +2,14 @@ package gvfraction
 // Fraction extension functions
 
 operator fun Int.minus(fr: FractionOperator): FractionOperator {
-    TODO("Implement subtraction")
+    return (-fr).minus(-this)
+   //return this.minus(fr)
 }
-
 operator fun Int.plus(fr: FractionOperator): FractionOperator {
-    TODO("Implement addition")
+    return fr.plus(this)
 }
 
 operator fun Int.times(fr: FractionOperator): FractionOperator {
-    TODO("Implement multiplication")
+    return fr.times(this)
+   // return this.times(fr)
 }

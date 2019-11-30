@@ -29,11 +29,11 @@ object FractionFactory {
             creator?.let {
                 if (values.size == 0) {
                     val ctor = it.constructors.find {
-//                        println("Param" + it.parameters[0].type.toString())
-                        it.parameters[0].type.toString().contains("Int")
+                        //println("Param" + it.parameters[0].type.toString())
+                        it.parameters.size == 0
                     }
                     ctor?.let {
-                        return it.call(0)
+                        return it.call()
                     }
                 } else {
                     var parmType: String
@@ -45,7 +45,7 @@ object FractionFactory {
                     val ctor = it.constructors?.find {
                         //                println("Parm " + it.parameters[0].type)
 //                        println("Param" + it.parameters[0].type.toString())
-                        it.parameters[0].type.toString().contains(parmType)
+                        it.parameters.size > 0 && it.parameters[0].type.toString().contains(parmType)
                     }
                     ctor?.let { return it.call(values[0]) }
                 }
