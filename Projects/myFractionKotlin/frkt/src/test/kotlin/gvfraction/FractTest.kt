@@ -784,7 +784,7 @@ class FractTest {
     fun lessThanDifferentSign() {
         val a = factory.create("-10 5/7")
         val b = factory.create("3 17/20")
-        assertTrue(a < b)
+        assertTrue(a < b) //
         assertFalse(b < a)
     }
 
