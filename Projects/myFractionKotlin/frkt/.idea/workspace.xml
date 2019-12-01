@@ -21,7 +21,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/gvfraction/FrexKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/gvfraction/FrexKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/gvfraction/KlosinmFraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/gvfraction/KlosinmFraction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/build-history.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
@@ -52,13 +51,9 @@
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/last-build.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/build-history.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
@@ -90,7 +85,6 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/gvfraction/Frex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/gvfraction/Frex.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/gvfraction/klosinmFraction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/gvfraction/klosinmFraction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../myfraction/.Rhistory" beforeDir="false" />
@@ -271,7 +265,7 @@
       <option name="presentableId" value="Default" />
       <updated>1574998551159</updated>
       <workItem from="1574998555676" duration="120000" />
-      <workItem from="1574998677672" duration="32149000" />
+      <workItem from="1574998677672" duration="39344000" />
     </task>
     <servers />
   </component>
@@ -283,25 +277,25 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="126" y="123" width="1214" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877@0.23.1440.877" timestamp="1575131814390" />
-    <state width="1721" height="285" key="GridCell.Tab.0.bottom" timestamp="1575156761329">
+    <state width="1875" height="285" key="GridCell.Tab.0.bottom" timestamp="1575168513982">
       <screen x="-240" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="1721" height="285" key="GridCell.Tab.0.bottom/0.23.1440.877/-240.-1177.1920.1177@-240.-1177.1920.1177" timestamp="1575156761329" />
+    <state width="1875" height="285" key="GridCell.Tab.0.bottom/0.23.1440.877/-240.-1177.1920.1177@-240.-1177.1920.1177" timestamp="1575168513982" />
     <state width="1372" height="285" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1575132878249" />
-    <state width="1721" height="285" key="GridCell.Tab.0.center" timestamp="1575156761328">
+    <state width="1875" height="285" key="GridCell.Tab.0.center" timestamp="1575168513981">
       <screen x="-240" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="1721" height="285" key="GridCell.Tab.0.center/0.23.1440.877/-240.-1177.1920.1177@-240.-1177.1920.1177" timestamp="1575156761328" />
+    <state width="1875" height="285" key="GridCell.Tab.0.center/0.23.1440.877/-240.-1177.1920.1177@-240.-1177.1920.1177" timestamp="1575168513981" />
     <state width="1372" height="285" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1575132878248" />
-    <state width="1721" height="285" key="GridCell.Tab.0.left" timestamp="1575156761328">
+    <state width="1875" height="285" key="GridCell.Tab.0.left" timestamp="1575168513980">
       <screen x="-240" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="1721" height="285" key="GridCell.Tab.0.left/0.23.1440.877/-240.-1177.1920.1177@-240.-1177.1920.1177" timestamp="1575156761328" />
+    <state width="1875" height="285" key="GridCell.Tab.0.left/0.23.1440.877/-240.-1177.1920.1177@-240.-1177.1920.1177" timestamp="1575168513980" />
     <state width="1372" height="285" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1575132878247" />
-    <state width="1721" height="285" key="GridCell.Tab.0.right" timestamp="1575156761329">
+    <state width="1875" height="285" key="GridCell.Tab.0.right" timestamp="1575168513981">
       <screen x="-240" y="-1177" width="1920" height="1177" />
     </state>
-    <state width="1721" height="285" key="GridCell.Tab.0.right/0.23.1440.877/-240.-1177.1920.1177@-240.-1177.1920.1177" timestamp="1575156761329" />
+    <state width="1875" height="285" key="GridCell.Tab.0.right/0.23.1440.877/-240.-1177.1920.1177@-240.-1177.1920.1177" timestamp="1575168513981" />
     <state width="1372" height="285" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1575132878249" />
     <state x="410" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1574998563796">
       <screen x="0" y="23" width="1440" height="877" />

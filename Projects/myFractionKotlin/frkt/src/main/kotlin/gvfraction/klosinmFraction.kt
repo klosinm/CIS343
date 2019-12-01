@@ -281,13 +281,32 @@ class KlosinmFraction() : FractionOperator{
         }
         //make improper
         val imp1: Int = (fract.y * fract.w).absoluteValue + (fract.x).absoluteValue
-        val imp2: Int = (fract2.denominator() * fract2.whole()).absoluteValue + (fract2.numerator()).absoluteValue
+        val imp2: Int = (fract2.denominator() * fract2.whole()) + (fract2.numerator())
 
         //new  numerator
-        val num1: Int = imp1 * fract2.denominator()
-        val num2: Int = imp2 * fract.y
-        val sumNum = num1 - num2
-
+        val num1: Int = imp2 * fract.y
+        val num2: Int = imp1 * fract2.denominator()
+1
+        val sumNum = num2 - num1
+       /* System.out.println("imp1= " + imp1)
+        System.out.println("imp2= " + imp2)
+        System.out.println("num1= " + num1)
+        System.out.println("num2= " + num2)
+        System.out.println("sumNum= " + sumNum)
+        System.out.println("F-F Fract w before checking isPos = " + fract.w)
+        System.out.println("F-F negVal2  before checking isPos = " + negVal2)
+        System.out.println("F-F Fract  = " + fract.w)
+        System.out.println("F-F other.whole()*negVal2  = " + other.whole()*negVal2)
+        System.out.println("fract.y - other.whole*neg = " + (fract.w - (other.whole()*negVal2)))*/
+        if (sumNum == 0 || ((fract.w - (other.whole()*negVal2)) >= 0)) {
+            fract.isPos = true
+        }
+        else if (fract.w < 0 || sumNum < 0) {
+            fract.isPos = false
+        }
+        else {
+            fract.isPos = true
+        }
         //new demoniator
         val dem: Int = fract.y * fract2.denominator()
 
@@ -296,23 +315,8 @@ class KlosinmFraction() : FractionOperator{
         fract.x = sumNum.absoluteValue
         fract.y = dem.absoluteValue
 
-        System.out.println("sumNum= " + sumNum)
-        if (fract.w < 0 || sumNum < 0 || fract2.whole() < 0 || negVal2 < 0) {
-            fract.isPos = false
-        } else {
-            fract.isPos = true
-        }
-
-        System.out.println("Fract.w = " + fract.w )
         fract.reduce()
-        System.out.println("F-F Fract w after reduce = " + fract.w)
-        System.out.println("F-F Fract x after reduce = " + fract.x)
-        System.out.println("F-F Fract y after reduce = " + fract.y)
-
         fract.makeProper()
-        System.out.println("F-F Fract w after proper = " + fract.w)
-        System.out.println("F-F Fract x after proper = " + fract.x)
-        System.out.println("F-F Fract y after proper = " + fract.y)
         return fract
     }
 
@@ -336,8 +340,19 @@ class KlosinmFraction() : FractionOperator{
         }
         fract.w = 0
         fract.x = newNum
-        fract.makeProper()
+        fract.w = fract.w.absoluteValue
+        fract.x = fract.x.absoluteValue
+        fract.y = fract.y.absoluteValue
+        System.out.println("Fract.w = " + fract.w )
         fract.reduce()
+        System.out.println("F-i Fract w after reduce = " + fract.w)
+        System.out.println("F-i Fract x after reduce = " + fract.x)
+        System.out.println("F-i Fract y after reduce = " + fract.y)
+
+        fract.makeProper()
+        System.out.println("F-i Fract w after proper = " + fract.w)
+        System.out.println("F-i Fract x after proper = " + fract.x)
+        System.out.println("F-i Fract y after proper = " + fract.y)
         return fract
     }
 
@@ -416,20 +431,23 @@ class KlosinmFraction() : FractionOperator{
     //Fraction * int
     override fun times(other: Int): FractionOperator {
         var fract = this
+        if (other < 0 || fract.w < 0 || fract.x < 0) {
+            fract.isPos = false
+        }
+        if ((other < 0 && fract.w < 0) || other == 0 || (other < 0 && fract.x < 0) || (other >= 0 && fract.w >= 0 && fract.x >= 0)) {
+            fract.isPos = true
+        }
+        else {
+            fract.isPos = false
+        }
         fract.w = fract.w * other
         fract.x = fract.x * other
 
-
-        if (other < 0 || fract.w < 0 || fract.x < 0) {
-            fract.isPos = false
-        } else if (other < 0 && fract.w < 0 || other < 0 && fract.x < 0 || other >= 0 && fract.w >= 0 && fract.x >= 0) {
-            fract.isPos = true
-        } else {
-            fract.isPos = true
-        }
-
-        fract.makeProper()
+        fract.w = fract.w.absoluteValue
+        fract.x = fract.x.absoluteValue
+        fract.y = fract.y.absoluteValue
         fract.reduce()
+        fract.makeProper()
         return fract
     }
 
@@ -469,15 +487,13 @@ class KlosinmFraction() : FractionOperator{
 
     /**_____________________________________________________________________**/
     override fun get(pos: Int): Optional<Int> {
-
-      /* // var NA: Int = 0
-
+       /* var NA: Int? = null
         if (pos == 0){
             if(w != 0){
                 return w
             }
             else{
-                return null
+                return NA
             }
         }
         else if (pos == 1){
@@ -487,7 +503,7 @@ class KlosinmFraction() : FractionOperator{
             }
             else
             {
-                return null
+                return NA
             }
         }
         else if (pos == 2)
@@ -498,11 +514,11 @@ class KlosinmFraction() : FractionOperator{
             }
             else
             {
-                return null
+                return NA
             }
         }
         else{
-            return null
+            return NA
         }*/
         TODO("not implemented")
     }
