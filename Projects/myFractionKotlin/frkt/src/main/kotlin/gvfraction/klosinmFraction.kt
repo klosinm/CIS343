@@ -100,7 +100,6 @@ class KlosinmFraction() : FractionOperator {
             this.y = 1
             this.w = 1
         }
-
     }
 
     override fun isProper(): Boolean {
@@ -174,26 +173,22 @@ class KlosinmFraction() : FractionOperator {
     //Fraction + Fraction
     override fun plus(other: FractionOperator): FractionOperator {
         var fract = this
+        val tmp = other as KlosinmFraction
         var dem1: Int = fract.y
         var dem2: Int = other.denominator()
 
         //finding consistent denominator
         var lcd: Int = lcm(dem1, dem2)
 
-        //see if fraction 2 is negative or not
-        val tmp = other as KlosinmFraction
-        var negVal2: Int = tmp.negValue()
-
-
         //making fractions improper, return improper numerator
         var num1: Int = fract.makeImproper()
-        var num2: Int = ((other.whole() * other.denominator() + other.numerator()))
+        var num2: Int = tmp.makeImproper()
 
         //new numerator
         var numerator1: Int = (lcd / dem1) * num1
-        var numerator2: Int = (lcd / dem2) * num2 * negVal2
+        var numerator2: Int = (lcd / dem2) * num2
 
-        //New numerator
+        //Sum of both numerators
         var sumNum: Int = numerator2 + numerator1
 
         if (sumNum < 0 || fract.w < 0)
@@ -236,33 +231,29 @@ class KlosinmFraction() : FractionOperator {
     //Fraction - Fraction
     override fun minus(other: FractionOperator): FractionOperator {
         var fract = this
-        var fract2 = other
-
-        //see if fraction 2 is negative or not
         val tmp = other as KlosinmFraction
-        var negVal2: Int = tmp.negValue()
+        var fract2 = other
 
         //make fractions improper
         var imp1: Int = fract.makeImproper().absoluteValue
-        var imp2: Int = ((other.whole() * other.denominator() + other.numerator()))
+        var imp2: Int = tmp.makeImproper().absoluteValue
 
-        //new  numerator
+        //new  numerator with common denominator
         val num1: Int = imp2 * fract.y
         val num2: Int = imp1 * fract2.denominator()
-
         val sumNum = num2 - num1
+        //new denominator
+        val dem: Int = fract.y * fract2.denominator()
 
-        if (sumNum == 0 || ((fract.w - (other.whole() * negVal2)) >= 0))
+        //see if fraction is positive or negative
+        if (sumNum == 0 || ((fract.w - (other.whole() * tmp.negValue())) >= 0))
             fract.isPos = true
         else if (fract.w < 0 || sumNum < 0)
             fract.isPos = false
         else
             fract.isPos = true
 
-        //new demoniator
-        val dem: Int = fract.y * fract2.denominator()
 
-        //New whole
         fract.w = 0
         fract.x = sumNum.absoluteValue
         fract.y = dem.absoluteValue
@@ -286,7 +277,6 @@ class KlosinmFraction() : FractionOperator {
 
         //Find if fraction - int is negative or not
         var newNumBool: Int = numeratorF - numeratorW
-
         if (newNumBool < 0)
             fract.isPos = false
         else
@@ -322,32 +312,30 @@ class KlosinmFraction() : FractionOperator {
     //Fraction * Fraction
     override fun times(other: FractionOperator): FractionOperator {
         var fract = this
+        val tmp = other as KlosinmFraction
         var fract2 = other
 
-        //see if fraction 2 is negative or not
-        val tmp = other as KlosinmFraction
-        var negVal2: Int = tmp.negValue()
-
         //see if value is negative or not
-        if (fract.w < 0 && negVal2 < 0)
+        if (fract.w < 0 && tmp.negValue() < 0)
             fract.isPos = true
-        else if (fract.x < 0 || fract.w < 0 || negVal2 < 0)
+        else if (fract.x < 0 || fract.w < 0 || tmp.negValue() < 0)
             fract.isPos = false
         else
             fract.isPos = true
 
         //make fractions improper
         var num1: Int = fract.makeImproper().absoluteValue
-        var num2: Int = ((other.whole() * other.denominator() + other.numerator()))
+        var num2: Int = tmp.makeImproper().absoluteValue
 
-        // new numerator
+        //new numerator
         fract.x = num1 * num2
-        //finding  denominator
+        //new denominator
         fract.y = fract2.denominator() * fract.y
         fract.w = 0
 
         fract.reduce()
         fract.makeProper()
+
         return fract
     }
 
@@ -372,18 +360,17 @@ class KlosinmFraction() : FractionOperator {
     //Fraction <,=,> Fraction
     override fun compareTo(other: FractionOperator): Int {
         var fract = this
-        var fract2 = other
-
-        //see if fraction 2 is negative or not
         val tmp = other as KlosinmFraction
-        var negVal2: Int = tmp.negValue()
+        var fract2 = other
 
         //making fraction improper, return improper numerator
         var num1: Int = fract.makeImproper()
-        var num2: Int = ((other.whole() * other.denominator() + other.numerator()))
-        //mutiply by the denominator of the other to be able to compare
+        var num2: Int = tmp.makeImproper()
+
+        //mutiply by the denominator of the other to then have same denominator,
+        //making the two fractions comparable
         var impnum1 = num1 * fract2.denominator()
-        var impnum2 = num2 * fract.y * negVal2
+        var impnum2 = num2 * fract.y
 
         // less than
         if (impnum1.compareTo(impnum2) < 0)
