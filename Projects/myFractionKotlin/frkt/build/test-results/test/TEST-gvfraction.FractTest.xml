@@ -1,81 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="gvfraction.FractTest" tests="80" skipped="0" failures="0" errors="0" timestamp="2019-12-02T21:55:06" hostname="MacBook-Pro-4.local" time="0.299">
+<testsuite name="gvfraction.FractTest" tests="80" skipped="0" failures="0" errors="0" timestamp="2019-12-02T22:20:47" hostname="MacBook-Pro-4.local" time="0.337">
   <properties/>
-  <testcase name="subtractTwoPosFractsPosResult" classname="gvfraction.FractTest" time="0.264"/>
-  <testcase name="constructorFromStringNegativeWholeNumber" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="subtractTwoPosFractsPosResult" classname="gvfraction.FractTest" time="0.299"/>
+  <testcase name="constructorFromStringNegativeWholeNumber" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="reduceWhenFractionWithRelativePrimNeg" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="reduceWhenFractionWithRelativePrimPos" classname="gvfraction.FractTest" time="0.001"/>
-  <testcase name="addNegIntAndPosFraction" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="reduceWhenFractionWithRelativePrimPos" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="addNegIntAndPosFraction" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="subtractTwoNegFractsNegResult" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="subtractToZero" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="constructorFromStringPosMixedFractionZeroDenominator" classname="gvfraction.FractTest" time="0.002"/>
+  <testcase name="constructorFromStringPosMixedFractionZeroDenominator" classname="gvfraction.FractTest" time="0.003"/>
   <testcase name="nonEqualityPositive" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="equalityCompareToSelf" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="nonEqualityNegative" classname="gvfraction.FractTest" time="0.001"/>
-  <testcase name="constructorFromStringPositiveWholeNumber" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="addPositiveIntAndPosFraction" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="constructorFromStringPositiveWholeNumber" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="addPositiveIntAndPosFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="multiplyWithZero" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="constructorFromStringMNegativeMixedFraction" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="constructorFromStringMNegativeMixedFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="lookUpPositiveMixedFraction" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="multiplyTwoFractionsOppositeSign" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="makeProperShouldAlterImproperFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="constructorFromWholeNumberInitializesCorrectly" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="lookUpNegativeWholeNumber" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="addPositiveFractionAndPositiveInt" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="unaryMinusPositiveMixedFraction" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="addPositiveFractionAndPositiveInt" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="unaryMinusPositiveMixedFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="lookUpPositive_wholenumber" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="equalityCompareDifferentSign" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="subtractTwoPosFractsNegResult" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="makeProperIntoWholeNumber" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="makeProperIntoWholeNumber" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="unaryMinusNegativePureFraction" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="nonEqualityFlipSign" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="nonEqualityFlipSign" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="lookUpNegativeFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="multiplyNegFractionAndNegInt" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="multiplyWithOne" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="unaryMinusNegativeMixedFraction" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="addNegIntAndNegFraction" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="addNegIntAndNegFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="subtractIntFromFraction" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="addTwoNegFractions" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="addTwoNegFractions" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="addPositiveFractionAndNegativeInt" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="multiplyNegIntAndPosFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="reduceWhenFractionHasCommonFactorNeg" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="reduceWhenFractionHasCommonFactorPos" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="constructorFromNegativeWholeNumberInitializesCorrectly" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="constructorFromStringPositiveMixedFraction" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="constructorFromStringPositiveMixedFraction" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="multiplyPosFractionAndNegInt" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="constructorFromStringPositivePureFraction" classname="gvfraction.FractTest" time="0.001"/>
-  <testcase name="multiplyPosFractionAndPosInt" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="constructorFromStringPositivePureFraction" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="multiplyPosFractionAndPosInt" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="multiplyPosIntAndPosFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="constructorFromStringPosPureFractionZeroDenominator" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="makeProperOnWholeNumber" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="lessThanPositiveMixedAndPure" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="addPositiveIntAndNegFraction" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="addPositiveIntAndNegFraction" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="checkIfReducedNeg" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="checkIfReducedPos" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="toProperOnProperFractionShallNotAlterData" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="checkIfReducedPos" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="toProperOnProperFractionShallNotAlterData" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="unaryMinusNegativeWholeNumber" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="constructorFromStringNegPureFractionZeroDenominator" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="constructorFromStringNegPureFractionZeroDenominator" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="lookUpPositiveMmixedFractions" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="addNegativeFractionAndPositiveInt" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="multiplyTwoNegFractions" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="addNegativeFractionAndPositiveInt" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="multiplyTwoNegFractions" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="lessThanDifferentSign" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="unaryMinusPositiveWholeNumber" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="makeProperDoesNotConvertToProper" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="unaryMinusPositiveWholeNumber" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="makeProperDoesNotConvertToProper" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="lookUpPositiveFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="addNegativeFractionAndNegativeInt" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="addTwoPosFractions" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="multiplyNegIntAndNegFraction" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="subtractTwoNegFractsPosResult" classname="gvfraction.FractTest" time="0.001"/>
-  <testcase name="defaultConstructorInitializesCorrectly" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="subtractTwoNegFractsPosResult" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="defaultConstructorInitializesCorrectly" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="makeProperShouldNotAlterProperFraction" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="equalityCompareToUnreducedNeg" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="equalityCompareToUnreducedNeg" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="equalityCompareToUnreducedPos" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="constructorFromStringNegativePureFraction" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="subtractFractFromInt" classname="gvfraction.FractTest" time="0.001"/>
+  <testcase name="subtractFractFromInt" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="lessThanPositiveFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="addTwoFractsOfDifferentSignNegSum" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="toProperImproperFractionShallAlterData" classname="gvfraction.FractTest" time="0.0"/>
-  <testcase name="addTwoFractsOfDifferentSignPosSum" classname="gvfraction.FractTest" time="0.0"/>
+  <testcase name="addTwoFractsOfDifferentSignPosSum" classname="gvfraction.FractTest" time="0.001"/>
   <testcase name="unaryMinusPositivePureFraction" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="lessThanNegativeMixedAndPure" classname="gvfraction.FractTest" time="0.0"/>
   <testcase name="constructorFromStringNegMixedFractionZeroDenominator" classname="gvfraction.FractTest" time="0.001"/>
